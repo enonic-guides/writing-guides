@@ -13,6 +13,20 @@ asciidoctor {
     sourceDir = file( 'docs' )
     outputDir = buildDir
     backends = ['html5']
+    attributes = [docinfo1                : '',
+                  docinfodir             : '.',
+                  imagesdir              : 'images',
+                  stylesheet             : null,
+                  icons                  : 'font',
+                  sectanchors            : true,
+                  sectlinks              : true,
+                  linkattrs              : true,
+                  encoding               : 'utf-8',
+                  idprefix               : '',
+                  toc                    : 'right',
+                  toclevels              : 1,
+                  'source-highlighter'   : 'coderay',
+                  'coderay-linenums-mode': 'table']
 }
 
 githubPages {
