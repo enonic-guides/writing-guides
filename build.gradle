@@ -22,7 +22,7 @@ githubPages {
     repoUri = "git@github.com:${repoSlug}.git"
     credentials {
         username = ghToken
-        password = "\n"
+        password = ''
     }
     pages {
         from "${asciidoctor.outputDir}/html5"
