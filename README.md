@@ -1,4 +1,4 @@
-= Writing Enonic Guides
+# Writing Enonic Guides
 
 * Content for this guide is in Asciidoc format and the entry file is `docs/index.adoc`.
 * Place new images under `docs/images`.
