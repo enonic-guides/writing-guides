@@ -1,0 +1,14 @@
+= Writing Enonic Guides
+
+This guide walks you through the process of writing a new guide for
+inclusion at the https://guides.enonic.com/[Enonic Guides Site]. These guides can
+take different forms—such as short, step-by-step tutorials or longer, more discussion-oriented
+pieces—but the process for writing and contributing them is the same.
+
+== What you'll need
+
+- A https://git-scm.org[Git] client (command line is fine, or use one of the many excellent GUI clients)
+- A https://github.com[GitHub] account
+- A http://www.oracle.com/technetwork/java/javase/downloads/index.html[Java Runtime Environment], version 1.8 or better
+- A text editor
+- A basic familiarity with http://asciidoctor.org/docs/user-manual/[Asciidoc]

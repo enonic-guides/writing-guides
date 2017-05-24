@@ -1,0 +1,13 @@
+language: java
+sudo: false
+
+jdk:
+  - oraclejdk8
+
+script:
+  - ./gradlew publishGhPages --stacktrace
+
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/

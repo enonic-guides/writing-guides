@@ -1,0 +1,33 @@
+plugins {
+    id "org.ajoberstar.github-pages" version "1.4.2"
+    id "org.asciidoctor.convert" version "1.5.3"
+}
+
+apply plugin: "base"
+
+ext {
+    repoSlug = System.getenv( 'TRAVIS_REPO_SLUG' )
+    ghToken = System.getenv( 'GH_TOKEN' )
+    branchName = System.getenv( 'TRAVIS_BRANCH' )
+    pullRequest = System.getenv( 'TRAVIS_PULL_REQUEST' )
+}
+
+asciidoctor {
+    sourceDir = file( 'docs' )
+    outputDir = buildDir
+    backends = ['html5']
+}
+
+githubPages {
+    repoUri = "https://github.com/${repoSlug}.git"
+    credentials {
+        username = ghToken
+        password = "\n"
+    }
+    pages {
+        from "${asciidoctor.outputDir}/html5"
+    }
+    commitMessage = "Publish to GitHub Pages"
+}
+
+publishGhPages.enabled = branchName == "master" && pullRequest == "false"
