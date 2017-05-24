@@ -14,9 +14,9 @@ ext {
 
 System.out.println("repoSlug = $repoSlug")
 System.out.println("ghToken = $ghToken")
-System.out.println("branchName = $branchName")
-System.out.println("pullRequest = $pullRequest")
-System.out.println("enabled = " + branchName == "master" && pullRequest == "false")
+System.out.println("branchName = '$branchName'")
+System.out.println("pullRequest = '$pullRequest'")
+System.out.println("enabled = " + (branchName == "master" && pullRequest == "false"))
 
 asciidoctor {
     sourceDir = file( 'docs' )
