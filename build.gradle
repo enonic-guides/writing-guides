@@ -12,12 +12,6 @@ ext {
     pullRequest = System.getenv( 'TRAVIS_PULL_REQUEST' )
 }
 
-System.out.println("repoSlug = $repoSlug")
-System.out.println("ghToken = $ghToken")
-System.out.println("branchName = '$branchName'")
-System.out.println("pullRequest = '$pullRequest'")
-System.out.println("enabled = " + (branchName == "master" && pullRequest == "false"))
-
 asciidoctor {
     sourceDir = file( 'docs' )
     outputDir = buildDir
@@ -25,7 +19,7 @@ asciidoctor {
 }
 
 githubPages {
-    repoUri = "https://github.com/${repoSlug}.git"
+    repoUri = "git@github.com:${repoSlug}.git"
     credentials {
         username = ghToken
         password = "\n"
@@ -33,7 +27,7 @@ githubPages {
     pages {
         from "${asciidoctor.outputDir}/html5"
     }
-    commitMessage = "Publish to GitHub Pages"
 }
 
+prepareGhPages.dependsOn += asciidoctor
 publishGhPages.enabled = branchName == "master" && pullRequest == "false"
