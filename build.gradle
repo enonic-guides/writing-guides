@@ -15,8 +15,6 @@ asciidoctor {
     backends = ['html5']
     attributes = [docinfo1               : '',
                   docinfodir             : '.',
-                  // imagesdir              : 'images',
-                  stylesheet             : null,
                   icons                  : 'font',
                   sectanchors            : true,
                   sectlinks              : true,
