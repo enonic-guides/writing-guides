@@ -12,3 +12,5 @@ pieces—but the process for writing and contributing them is the same.
 - A http://www.oracle.com/technetwork/java/javase/downloads/index.html[Java Runtime Environment], version 1.8 or better
 - A text editor
 - A basic familiarity with http://asciidoctor.org/docs/user-manual/[Asciidoc]
+
+image::images/logo.png[]
